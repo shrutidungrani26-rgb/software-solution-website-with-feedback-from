@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - Software Solutions | Rate & Review Our Services</title>
+  <meta name="description" content="Share your valuable feedback, rate our software solutions, and help us enhance our digital IT services.">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="navbar-header">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <span>Software <span class="brand-accent">Solutions</span></span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="feedback.html" class="nav-link active">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="section">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-badge">Client Reviews</span>
+        <h1 class="section-title">Share Your Feedback</h1>
+        <p class="section-subtitle">
+          We value your experience and opinions. Let us know how our software solutions and technical assistance helped you.
+        </p>
+      </div>
+
+      <div class="feedback-wrapper">
+        
+        <!-- Helpful Banner -->
+        <div class="feedback-info-banner">
+          <i class="fa-solid fa-circle-info" style="font-size: 1.25rem;"></i>
+          <span>Your feedback helps us improve our services and build better software solutions.</span>
+        </div>
+
+        <!-- Feedback Form Box -->
+        <div class="form-box">
+          
+          <!-- Success Message Alert Box (Rendered by JavaScript) -->
+          <div id="feedbackSuccessAlert" class="alert-box alert-success" role="alert"></div>
+
+          <!-- Feedback Form -->
+          <form id="feedbackForm" novalidate>
+            
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="feedbackName" class="form-label">
+                Full Name <span class="required">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="feedbackName" 
+                class="form-control" 
+                placeholder="e.g. Priya Patel" 
+                autocomplete="name"
+                required
+              >
+              <div id="feedbackNameError" class="error-feedback"></div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+              <label for="feedbackEmail" class="form-label">
+                Email Address <span class="required">*</span>
+              </label>
+              <input 
+                type="email" 
+                id="feedbackEmail" 
+                class="form-control" 
+                placeholder="e.g. priya.patel@example.com" 
+                autocomplete="email"
+                required
+              >
+              <div id="feedbackEmailError" class="error-feedback"></div>
+            </div>
+
+            <!-- Interactive 5-Star Rating -->
+            <div class="form-group">
+              <label class="form-label">
+                Overall Rating <span class="required">*</span>
+              </label>
+              
+              <div class="rating-container">
+                <div class="star-rating" id="starRating" role="radiogroup" aria-label="Rating from 1 to 5 stars">
+                  <span class="star" data-value="1" title="1 Star - Poor" role="radio" aria-checked="false" tabindex="0">★</span>
+                  <span class="star" data-value="2" title="2 Stars - Fair" role="radio" aria-checked="false" tabindex="0">★</span>
+                  <span class="star" data-value="3" title="3 Stars - Good" role="radio" aria-checked="false" tabindex="0">★</span>
+                  <span class="star" data-value="4" title="4 Stars - Very Good" role="radio" aria-checked="false" tabindex="0">★</span>
+                  <span class="star" data-value="5" title="5 Stars - Excellent" role="radio" aria-checked="false" tabindex="0">★</span>
+                </div>
+                <!-- Rating Description Status -->
+                <div id="ratingText" class="rating-text">Select a rating (1 to 5 stars)</div>
+                <!-- Hidden Rating Input Field for State -->
+                <input type="hidden" id="ratingValue" name="rating" value="">
+              </div>
+              
+              <div id="ratingError" class="error-feedback"></div>
+            </div>
+
+            <!-- Feedback Message -->
+            <div class="form-group">
+              <label for="feedbackMessage" class="form-label">
+                Feedback Message <span class="required">*</span>
+              </label>
+              <textarea 
+                id="feedbackMessage" 
+                rows="4" 
+                class="form-control" 
+                placeholder="Tell us what you liked about our software solutions and services..."
+                required
+              ></textarea>
+              <div id="feedbackMessageError" class="error-feedback"></div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa-solid fa-star"></i> Submit Feedback
+            </button>
+          </form>
+
+        </div>
+
+        <!-- Demonstration Testimonials Section for Practical Journal Presentation -->
+        <div class="feedback-testimonials">
+          <h3 style="font-size: 1.3rem; color: var(--secondary-color); text-align: center; margin-bottom: 5px;">
+            Recent Client Testimonials
+          </h3>
+          <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+            See what our clients and users say about Software Solutions.
+          </p>
+
+          <div class="testimonial-grid">
+            <!-- Review 1 -->
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <span class="testimonial-author">Aarav Mehta</span>
+                <span class="testimonial-stars">★★★★★</span>
+              </div>
+              <p>"The Web Development and UI design exceeded expectations. The responsive layout and clean structure are exceptional!"</p>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <span class="testimonial-author">Sneha Shah</span>
+                <span class="testimonial-stars">★★★★★</span>
+              </div>
+              <p>"Outstanding database design and query optimization. Fast, reliable, and prompt 24/7 technical support."</p>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <span class="testimonial-author">Kavita Joshi</span>
+                <span class="testimonial-stars">★★★★☆</span>
+              </div>
+              <p>"User-friendly and intuitive software tools. The custom software provided streamlined our workflow significantly."</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: About -->
+        <div class="footer-col">
+          <div class="nav-brand" style="color: #ffffff; margin-bottom: 15px;">
+            <div class="brand-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <span>Software <span class="brand-accent">Solutions</span></span>
+          </div>
+          <p class="footer-desc">
+            "Smart Software Solutions for a Digital Future"
+          </p>
+          <p class="footer-desc" style="font-size: 0.85rem;">
+            SYBCA AI Practical / Journal Submission Project showcasing responsive web technologies and frontend engineering.
+          </p>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
+            <li><a href="feedback.html"><i class="fa-solid fa-angle-right"></i> Feedback</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>info@softwaresolutions.com</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 98765 43210</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Surat, Gujarat, India</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Software Solutions. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Software Solutions | Get in Touch</title>
+  <meta name="description" content="Contact Software Solutions for project consultations, technical inquiries, and web software development services in Surat, Gujarat.">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="navbar-header">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <span>Software <span class="brand-accent">Solutions</span></span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="feedback.html" class="nav-link">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="section">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-badge">Reach Out To Us</span>
+        <h1 class="section-title">Contact Us</h1>
+        <p class="section-subtitle">
+          Have a question or looking to build a new software project? Send us a message and our team will get in touch promptly.
+        </p>
+      </div>
+
+      <!-- Contact Layout Grid -->
+      <div class="contact-layout-grid">
+        
+        <!-- Left Column: Contact Information & Details -->
+        <div class="contact-info-card">
+          <h3>Get In Touch</h3>
+          <p>
+            We are always here to assist students, enterprises, and innovators with modern software solutions and technical consultations.
+          </p>
+
+          <div class="contact-details-list">
+            <!-- Email -->
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-item-text">
+                <h5>Email Address</h5>
+                <a href="mailto:info@softwaresolutions.com">info@softwaresolutions.com</a>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="contact-item-text">
+                <h5>Phone Number</h5>
+                <a href="tel:+919876543210">+91 98765 43210</a>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-item-text">
+                <h5>Office Location</h5>
+                <span>Surat, Gujarat, India</span>
+              </div>
+            </div>
+
+            <!-- Working Hours -->
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div class="contact-item-text">
+                <h5>Working Hours</h5>
+                <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Illustration -->
+          <div>
+            <img src="images/contact.jpg" alt="Technical Support & Communication" class="contact-image">
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Contact Form -->
+        <div class="form-box">
+          <h3 style="font-size: 1.5rem; color: var(--secondary-color); margin-bottom: 8px;">
+            Send Us a Message
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 22px;">
+            Fill out the form below with your project details or inquiries.
+          </p>
+
+          <!-- Success Alert Box (Populated by JavaScript) -->
+          <div id="contactSuccessAlert" class="alert-box alert-success" role="alert"></div>
+
+          <!-- Form Element -->
+          <form id="contactForm" novalidate>
+            
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="contactName" class="form-label">
+                Full Name <span class="required">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="contactName" 
+                class="form-control" 
+                placeholder="e.g. Rahul Sharma" 
+                autocomplete="name"
+                required
+              >
+              <div id="contactNameError" class="error-feedback"></div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+              <label for="contactEmail" class="form-label">
+                Email Address <span class="required">*</span>
+              </label>
+              <input 
+                type="email" 
+                id="contactEmail" 
+                class="form-control" 
+                placeholder="e.g. rahul@example.com" 
+                autocomplete="email"
+                required
+              >
+              <div id="contactEmailError" class="error-feedback"></div>
+            </div>
+
+            <!-- Subject -->
+            <div class="form-group">
+              <label for="contactSubject" class="form-label">
+                Subject <span class="required">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="contactSubject" 
+                class="form-control" 
+                placeholder="e.g. Inquiry about Web Development" 
+                required
+              >
+              <div id="contactSubjectError" class="error-feedback"></div>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label for="contactMessage" class="form-label">
+                Message <span class="required">*</span>
+              </label>
+              <textarea 
+                id="contactMessage" 
+                rows="5" 
+                class="form-control" 
+                placeholder="Please describe your requirements or inquiry..."
+                required
+              ></textarea>
+              <div id="contactMessageError" class="error-feedback"></div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: About -->
+        <div class="footer-col">
+          <div class="nav-brand" style="color: #ffffff; margin-bottom: 15px;">
+            <div class="brand-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <span>Software <span class="brand-accent">Solutions</span></span>
+          </div>
+          <p class="footer-desc">
+            "Smart Software Solutions for a Digital Future"
+          </p>
+          <p class="footer-desc" style="font-size: 0.85rem;">
+            SYBCA AI Practical / Journal Submission Project showcasing responsive web technologies and frontend engineering.
+          </p>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
+            <li><a href="feedback.html"><i class="fa-solid fa-angle-right"></i> Feedback</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>info@softwaresolutions.com</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 98765 43210</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Surat, Gujarat, India</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Software Solutions. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
